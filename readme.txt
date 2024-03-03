@@ -1,0 +1,1 @@
+Still app for training Git command
