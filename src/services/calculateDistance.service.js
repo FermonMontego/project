@@ -1,5 +1,3 @@
-import getCities from "../api/cities/get";
-
 export const calculate = {
     computedDistanceForDelivery(
         cities_with_stock = null,
@@ -25,7 +23,6 @@ export const calculate = {
         if (!cities_distances_sorted) {
             return 'Нет маршрута в выбранный город';
         } else {
-            console.log(cities_distances_sorted, 'cities_distances_sorted')
             return `Ближайший с вами город №${cities_distances_sorted[0].DST_CITY_ID} в котором есть склад, расстояние: ${cities_distances_sorted[0].DISTANCE}`;
         }
     },
