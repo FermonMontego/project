@@ -11,6 +11,10 @@ const defaultValue = [
     CITY_ID: 3,
     IS_STOCK: 1,
   },
+  {
+    CITY_ID: 10,
+    IS_STOCK: 0,
+  },
 ];
 
 let tableValue = null;

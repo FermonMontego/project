@@ -10,6 +10,21 @@ const defaultValue = [
     DISTANCE: 20,
   },
   {
+    SRC_CITY_ID: 1,
+    DST_CITY_ID: 10,
+    DISTANCE: 255,
+  },
+  {
+    SRC_CITY_ID: 5,
+    DST_CITY_ID: 10,
+    DISTANCE: 120,
+  },
+  {
+    SRC_CITY_ID: 6,
+    DST_CITY_ID: 10,
+    DISTANCE: 65,
+  },
+  {
     SRC_CITY_ID: 2,
     DST_CITY_ID: 1,
     DISTANCE: 15,
