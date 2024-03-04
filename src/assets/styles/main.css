@@ -1,0 +1,41 @@
+@import url(./_fonts.css);
+@import url(./_variables.css);
+@import url(./_reset.css);
+
+body {
+  font-size: 50px;
+}
+
+.main-forms {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+}
+
+form {
+  border: 1px solid #bbb;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+form label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+form label span {
+  font-size: 14px;
+}
+
+form h3 {
+  font-size: 21px;
+}
+
+.container {
+  max-width: 1140px;
+  padding: 15px;
+  margin: 0 auto;
+}
