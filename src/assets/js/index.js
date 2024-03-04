@@ -5,14 +5,14 @@ import "../styles/main.css";
 import getCities from "../../api/cities/get";
 import getDistances from "../../api/distances/get";
 
-import { calculate } from "../../services/CalculateDistance.service";
+import {calculate} from "../../services/CalculateDistance.service";
 
 const form = document.querySelector("form[data-delivery-form]");
 const selects = form.querySelectorAll("select");
 const nearestCityResult = document.getElementById("nearest_city");
 
 function createOptionsElement(parentNode) {
-  if (parentNode.type == "city_to_delivery") {
+  if (parentNode.type === "city_to_delivery") {
     getCities.getAllCities().forEach((city) => {
       const optionElement = document.createElement("option");
 
@@ -41,13 +41,11 @@ function submitDeliveryForm(event) {
 
   const form_data = new FormData(form);
 
-  const result = calculate.computedDistanceForDelivery(
-    getCities.getOnlyHasStockCities(),
-    getDistances.get(),
-    form_data.get("city_to_delivery")
+  nearestCityResult.querySelector("span").innerHTML = calculate.computedDistanceForDelivery(
+      getCities.getOnlyHasStockCities(),
+      getDistances.get(),
+      form_data.get("city_to_delivery")
   );
-
-  nearestCityResult.querySelector("span").innerHTML = result;
 
 }
 
